@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root {
+    --my-padding: 0.4rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+.header {
+    align-items: center;
+    display: grid;
+    background-color:black;
+    grid-area: header;
+    padding: var(--my-padding);
+}
+.menu {
+    align-items: center;
+    display: grid;
+    background-color:tomato;
+    grid-area: menu;
+    padding: var(--my-padding);
+}
+.hero {
+    align-items: center;
+    display: grid;
+    background-color: rgba(0, 0, 255, 0.609);
+    grid-area: hero;
+    padding: var(--my-padding);
+}
+.banner {
+    align-items: center;
+    display: grid;
+    background-color: orangered;
+    grid-area: banner;
+    padding: var(--my-padding);
+}
+.main {
+    align-items: center;
+    display: grid;
+    background-color:rgb(139, 0, 0);
+    grid-area: main;
+    padding: var(--my-padding);
+}
+.extra {
+    align-items: center;
+    display: grid;
+    background-color: green;
+    grid-area: extra;
+    padding: var(--my-padding);
+}
+footer {
+    align-items: center;
+    display: grid;
+    background-color: gray;
+    grid-area: footer;
+    padding: var(--my-padding);
+}
+@media (min-width: 1025px) {
+    .desktop {
+        color: black;
+        text-decoration: black;
+        align-items: center;
+        display: grid;
+        background-color: white;
+        grid-area: desktop;
+        padding: var(--my-padding);
+    }
+    .container {
+        color: white;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 2fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "desktop desktop"
+            "header menu"
+            "hero hero"
+            "main footer"
+            "main extra"
+            "banner banner"
+        ;
+        height: 100vh;
+        text-align: center;
+    
+    }
+}
+@media (max-width: 1024px) {
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        color: black;
+        text-decoration: black;
+        align-items: center;
+        display: grid;
+        background-color: white;
+        grid-area: tablet;
+        padding: var(--my-padding);
+    }
+    .container {
+        color: white;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 1.5fr 2fr 1fr 1fr;
+        grid-template-areas: 
+            "tablet tablet tablet"
+            "header header header"
+            "hero hero hero"
+            "menu main main"
+            "menu banner banner"
+            "menu extra footer";
+            ;
+            height: 100vh;
+            text-align: center;
+        }
+}
+@media (max-width: 480px) {
+    .tablet {
+        display: none;
+    }
+    .mobile {
+        color: black;
+        text-decoration: black;
+        align-items: center;
+        display: grid;
+        background-color: white;
+        grid-area: mobile;
+        padding: var(--my-padding);
+    }
+    .container {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 1.5fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "mobile"
+            "header"
+            "menu"
+            "hero"
+            "main"
+            "banner"
+            "extra"
+            "footer"
+            ;
+            height: 100vh;
+            text-align: center;
+        }
+}
+
